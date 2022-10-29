@@ -1,3 +1,4 @@
+import Cards from '../components/Cards'
 import './Home.css'
 const Home = () => {
     return (
@@ -5,7 +6,7 @@ const Home = () => {
            <h3 className='text-center text-warning mt-5 text-uppercase'>shop page</h3>
            <div className="container py-4">
                 <div className="row">
-                    
+                    <Cards />
                 </div>
            </div>
         </div>
