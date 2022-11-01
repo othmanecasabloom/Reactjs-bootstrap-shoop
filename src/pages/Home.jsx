@@ -1,14 +1,21 @@
-import Cards from '../components/Cards'
-import './Home.css'
+import Cards from '../components/Cards';
+import data from '../backend/data';
+import './Home.css';
+
 const Home = () => {
     return (
-        <div className="container-fluid px-20 py-10">
-           <h3 className='text-center text-warning mt-5 text-uppercase'>shop page</h3>
-           <div className="container py-4">
+        <div className='container-fluid'>
+            <h3 className='text-center mt-5 text-uppercase'>Shop Page</h3>
+            <div className="container py-4">
                 <div className="row">
-                    <Cards />
+                    {data.products.map((item, index) => {
+                        return (
+                            <Cards img={item.img} title={item.title} desc={item.desc} price={item.price} item={item} key={index}/>
+                        )
+                    })}
+                    
                 </div>
-           </div>
+            </div>
         </div>
     )
 }
